@@ -1,0 +1,52 @@
+<div>
+    <md-toolbar class="md-hue-2" md-whiteframe="3">
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>Proyectos exitosos</span>
+        </h2>
+      </div>
+    </md-toolbar>
+    <md-button class="md-accent md-fab md-fab-bottom-right" ng-click="homeCtrl.rate( $event )">
+      <md-icon md-font-set="material-icons">star_rate</md-icon>
+    </md-button>
+    <md-content flex layout-margin style="height: 85vh;">
+      <div flex layout="column" layout-align="center start">
+        <span class="md-title">{{ homeCtrl.proyecto.titulo }}</span>
+      </div>
+      <div flex layout layout-align="start center">
+        <h2 class="md-subhead">Cliente</h2>
+      </div>
+      <div flex layout="column" layout-align="center start">
+        <span class="md-body-1">{{ homeCtrl.proyecto.cliente }}</span>
+      </div>
+      <div flex layout layout-align="start center">
+        <h2 class="md-subhead">Objetivo</h2>
+      </div>
+      <div flex layout="column" layout-align="center start">
+        <span class="md-body-1">{{ homeCtrl.proyecto.objetivo }}</span>
+      </div>
+      <div flex layout layout-align="start center">
+        <h2 class="md-subhead">Características</h2>
+      </div>
+      <div flex layout="column" layout-align="center start">
+        <md-list flex>
+          <md-list-item ng-repeat="caracteristica in homeCtrl.proyecto.caracteristicas">
+            <span class="md-body-1">{{ caracteristica }}</span>
+            <md-divider></md-divider>
+          </md-list-item>
+        </md-list>
+      </div>
+      <div flex layout layout-align="start center">
+        <h2 class="md-subhead">Tecnologías</h2>
+      </div>
+      <div flex layout layout-align="start center" layout-wrap>
+        <md-list flex="100">
+          <md-list-item flex ng-repeat="tecnologia in homeCtrl.proyecto.tecnologias">
+            <span class="md-body-1">{{ tecnologia }}</span>
+            <md-divider></md-divider>
+          </md-list-item>
+        </md-list>
+      </div>
+      <div flex layout style="height:50px"></div>
+    </md-content>
+</div>
