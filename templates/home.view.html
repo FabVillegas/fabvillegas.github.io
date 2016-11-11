@@ -14,26 +14,26 @@
     </div>
     <md-content flex ng-hide="homeCtrl.loading" layout-margin style="height: 85vh;" ng-cloak>
       <div flex layout="column" layout-align="center start">
-        <span class="md-title">{{ homeCtrl.proyecto.titulo }}</span>
+        <span class="md-title">{{ homeCtrl.project.titulo }}</span>
       </div>
       <div flex layout layout-align="start center">
         <h2 class="md-subhead">Cliente</h2>
       </div>
       <div flex layout="column" layout-align="center start">
-        <span class="md-body-1">{{ homeCtrl.proyecto.cliente }}</span>
+        <span class="md-body-1">{{ homeCtrl.project.cliente }}</span>
       </div>
       <div flex layout layout-align="start center">
         <h2 class="md-subhead">Objetivo</h2>
       </div>
       <div flex layout="column" layout-align="center start">
-        <span class="md-body-1">{{ homeCtrl.proyecto.objetivo }}</span>
+        <span class="md-body-1">{{ homeCtrl.project.objetivo }}</span>
       </div>
       <div flex layout layout-align="start center">
         <h2 class="md-subhead">Características</h2>
       </div>
       <div flex layout="column" layout-align="center start">
         <md-list flex>
-          <md-list-item ng-repeat="caracteristica in homeCtrl.proyecto.caracteristicas">
+          <md-list-item ng-repeat="caracteristica in homeCtrl.project.caracteristicas">
             <span class="md-body-1">{{ caracteristica }}</span>
             <md-divider></md-divider>
           </md-list-item>
@@ -44,7 +44,7 @@
       </div>
       <div flex layout layout-align="start center" layout-wrap>
         <md-list flex="100">
-          <md-list-item flex ng-repeat="tecnologia in homeCtrl.proyecto.tecnologias">
+          <md-list-item flex ng-repeat="tecnologia in homeCtrl.project.tecnologias">
             <span class="md-body-1">{{ tecnologia }}</span>
             <md-divider></md-divider>
           </md-list-item>
