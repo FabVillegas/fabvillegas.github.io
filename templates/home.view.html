@@ -6,10 +6,13 @@
         </h2>
       </div>
     </md-toolbar>
-    <md-button class="md-accent md-fab md-fab-bottom-right" ng-click="homeCtrl.rate( $event )">
+    <md-button class="md-accent md-fab md-fab-bottom-right" ng-hide="homeCtrl.loading" ng-click="homeCtrl.rate( $event )">
       <md-icon md-font-set="material-icons">star_rate</md-icon>
     </md-button>
-    <md-content flex layout-margin style="height: 85vh;">
+    <div flex layout layout-align="center center" layout-margin ng-show="homeCtrl.loading">
+      <md-progress-circular class="md-accent" md-mode="indeterminate" md-diameter="100" ng-disabled="!homeCtrl.loading"></md-progress-circular>
+    </div>
+    <md-content flex ng-hide="homeCtrl.loading" layout-margin style="height: 85vh;">
       <div flex layout="column" layout-align="center start">
         <span class="md-title">{{ homeCtrl.proyecto.titulo }}</span>
       </div>
