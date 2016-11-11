@@ -12,7 +12,7 @@
     <div flex layout layout-align="center center" layout-margin ng-show="homeCtrl.loading">
       <md-progress-circular class="md-accent" md-mode="indeterminate" md-diameter="100" ng-disabled="!homeCtrl.loading"></md-progress-circular>
     </div>
-    <md-content flex ng-hide="homeCtrl.loading" layout-margin style="height: 85vh;">
+    <md-content flex ng-hide="homeCtrl.loading" layout-margin style="height: 85vh;" ng-cloak>
       <div flex layout="column" layout-align="center start">
         <span class="md-title">{{ homeCtrl.proyecto.titulo }}</span>
       </div>
